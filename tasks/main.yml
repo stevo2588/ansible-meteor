@@ -9,7 +9,7 @@
 
   - name: get meteor installer
     get_url:
-      url=https://install.meteor.com/
+      url=https://install.meteor.com/?release={{ meteor_version }}
       dest=/tmp/meteor.sh
       mode=0440
     when: mtr_version.changed and mtr_version.rc != 0
